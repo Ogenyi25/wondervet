@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+* .reveal {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+* .reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+* .bottom {
+  position: relative;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  opacity: 0;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+* .bottom.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12vh;
+  background-color: #19191d;
+  overflow: hidden;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar .logo {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: #149dc3;
+}
+
+.navbar .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .nav-links li {
+  list-style: none;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #f7f7f7;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #149dc3;
+}
+
+.navbar .burger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .burger div {
+  width: 20px;
+  height: 3px;
+  background-color: #f7f7f7;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.body {
+  margin-top: 80px;
+}
+
+.hero-section {
+  width: 100%;
+  height: 90vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.158)), to(rgba(0, 0, 0, 0.081))), url(./images/herobg.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.081)), url(./images/herobg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero-section .title {
+  background-color: transparent;
+  font-size: 60px;
+  color: #ebebeb;
+  font-weight: 900;
+  text-transform: capitalize;
+  width: 50%;
+  margin: 20px auto;
+  line-height: 100px;
+}
+
+.hero-section .title span {
+  background-color: #149dc326;
+  padding: 3px 20px;
+  border-radius: 5px;
+  color: #149dc3;
+}
+
+.hero-section .description {
+  background-color: transparent;
+  font-weight: 200;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #f7f7f7;
+  margin-top: 50px;
+}
+
+.hero-section .button {
+  width: 200px;
+  padding: 15px 0;
+  background-color: #149dc3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin: 70px auto;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.activities-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+}
+
+.activities-card .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.activities-card .card .card-img {
+  width: 90%;
+  -webkit-transition: ease-out .5s;
+  transition: ease-out .5s;
+}
+
+.activities-card .card:hover .card-img {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-transition: ease-in .5s;
+  transition: ease-in .5s;
+}
+
+.about-section {
+  padding: 200px 0;
+  background-image: url(./images/messagebg.svg);
+  background-size: cover;
+}
+
+.about-section .message-title {
+  text-align: center;
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.about-section .message-title span {
+  color: #149dc3;
+}
+
+.about-section .ceo-message {
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-section .ceo-message .ceo-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.about-section .ceo-message .ceo-image .image {
+  width: 60%;
+}
+
+.about-section .ceo-message .message {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 100px auto;
+}
+
+.about-section .ceo-message .message .title {
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.about-section .ceo-message .message .title span {
+  color: #149dc3;
+}
+
+.about-section .ceo-message .message .words {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  width: 500px;
+}
+
+.about-section .ceo-message .message .credits {
+  margin-top: 30px;
+}
+
+.service-section {
+  /* The Modal (background) */
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+
+.service-section .section-title {
+  text-align: center;
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.service-section .section-title span {
+  color: #149dc3;
+}
+
+.service-section .tagline {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.service-section .service-grid {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-section .service-grid .service-row {
+  margin-top: 20px auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.service-section .service-grid .service-row .service-icon {
+  width: 150px;
+  cursor: pointer;
+  fill: #777777;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
+.service-section .service-grid .service-row .service-icon:hover {
+  fill: #149dc3;
+}
+
+.service-section .service-grid .service-row .service-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #202020;
+}
+
+.service-section .service-grid .service-row .service-text {
+  margin: 2px auto;
+  width: 70%;
+}
+
+.service-section .service-grid .service-row .service-button {
+  color: #149dc3;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
+.service-section .service-grid .service-row .service-button:hover {
+  font-size: 20px;
+}
+
+.service-section .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.service-section .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 100px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.service-section .modal-content .title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.service-section .modal-content .offer {
+  margin-bottom: 20px;
+}
+
+.service-section .modal-content .offer .offers {
+  width: 80%;
+}
+
+.service-section .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  margin-top: -60px;
+}
+
+.service-section .close:hover,
+.service-section .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar .nav-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  body .navbar .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #19191d;
+    color: #f7f7f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  body .navbar .nav-links li {
+    opacity: 0;
+  }
+  body .navbar .burger {
+    display: block;
+  }
+  body .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  body .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  body .toggle .line2 {
+    opacity: 0;
+  }
+  body .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+/*# sourceMappingURL=wondervet.css.map */
